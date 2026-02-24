@@ -1,16 +1,12 @@
-# Box IA Tutor
+# Box AI Tutor (iOS)
 
-iOS SwiftUI starter skeleton for an on-device/remote boxing (“Box AI”) style coaching app.
+SwiftUI starter skeleton for a Box AI–powered tutor app.
 
-## What’s in this repo
-- **SwiftUI app skeleton** (organized by feature folders)
-  - `UI/` – shell/navigation
-  - `Capture/` – camera permission + camera preview
-  - `Pose/` – pose/vision stubs (placeholder)
-  - `Coach/` – coaching logic stubs (placeholder)
-- **Localization**: English, Spanish, French
-- **Camera usage description** in `Info.plist`
-- **XcodeGen** project spec (`ios/project.yml`) so the project can be generated consistently
+## What’s included
+- Minimal SwiftUI app shell
+- Basic folder structure: Models, Views, Services
+- Placeholder `BoxAIService` for future API integration
+- XcodeGen project spec (`project.yml`)
 
 ## Requirements
 - macOS with Xcode 15+
@@ -24,20 +20,42 @@ brew install xcodegen
 ## Generate the Xcode project
 From the repo root:
 ```bash
-cd ios
 xcodegen generate
 open BoxIATutor.xcodeproj
 ```
 
-## Notes
-- This repo is currently a **skeleton**. Pose estimation / coaching logic are intentionally stubs to be filled in.
-- Camera preview uses `AVCaptureSession` and requests permission at runtime.
+## Suggested plan
+1. **Project setup**
+   - Confirm Xcode project (target iOS 17+)
+   - Add app icon, launch screen, and basic branding
+2. **Core UI**
+   - Chat-style interface (messages list + composer)
+   - Conversation state management (ViewModel)
+3. **API integration**
+   - Box OAuth / JWT auth setup
+   - Box AI endpoints: prompt, summarize, Q&A
+   - Secure key storage (Keychain)
+4. **Data layer**
+   - Local conversation history (SwiftData/CoreData)
+   - Optional document picker + file upload to Box
+5. **Polish & release**
+   - Error handling, offline states
+   - Accessibility + localization
+   - TestFlight build
 
-## Next steps (suggested)
-- Add a real pose pipeline (Vision / MediaPipe / MoveNet / etc.)
-- Add a coaching state machine and sample exercise flows
-- Add unit tests and CI (GitHub Actions for Xcode)
+## Structure
+```
+BoxIATutor/
+  BoxIATutorApp.swift
+  Views/
+    ContentView.swift
+  Models/
+    ChatMessage.swift
+  Services/
+    BoxAIService.swift
+  Assets.xcassets/
+```
 
-## Coordination
-- Repository: https://github.com/mitre88/box-ia-tutor
-- Team comms: this group chat
+---
+
+> Note: This repo currently contains the SwiftUI skeleton files only. Create the Xcode project or integrate these files into an existing project as needed.
