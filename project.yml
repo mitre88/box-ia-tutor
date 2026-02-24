@@ -1,0 +1,20 @@
+name: BoxIATutor
+options:
+  bundleIdPrefix: com.mitre88
+settings:
+  base:
+    DEVELOPMENT_TEAM: ""
+    SWIFT_VERSION: 5.0
+targets:
+  BoxIATutor:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: BoxIATutor
+    resources:
+      - BoxIATutor/Assets.xcassets
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.mitre88.BoxIATutor
+        INFOPLIST_FILE: BoxIATutor/Info.plist
