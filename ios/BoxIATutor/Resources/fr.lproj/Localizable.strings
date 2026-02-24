@@ -1,0 +1,12 @@
+/* General */
+"app_title" = "Box IA Tutor";
+
+/* Home */
+"home_title" = "Accueil";
+"start_capture" = "Démarrer la capture";
+
+/* Camera */
+"camera_permission_title" = "Autorisation caméra";
+"camera_permission_message" = "Nous avons besoin d’accéder à la caméra pour capturer vos mouvements.";
+"open_settings" = "Ouvrir Réglages";
+"camera_unavailable" = "Caméra indisponible";

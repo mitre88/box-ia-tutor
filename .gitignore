@@ -1,0 +1,29 @@
+# Xcode
+.DS_Store
+xcuserdata/
+*.xccheckout
+*.xcuserstate
+DerivedData/
+.build/
+
+# SwiftPM
+Packages/
+Package.resolved
+
+# XcodeGen
+# (keep project.yml tracked; generated project can be tracked or ignored)
+
+# CocoaPods / Carthage
+Pods/
+Carthage/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# App artifacts
+*.ipa
+*.dSYM.zip
+*.dSYM

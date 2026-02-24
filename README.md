@@ -1,96 +1,43 @@
-# Box AI - iOS Coaching App 🥊
+# Box IA Tutor
 
-**Professional boxing coaching app with real-time camera + on-device AI feedback**
+iOS SwiftUI starter skeleton for an on-device/remote boxing (“Box AI”) style coaching app.
 
-## 🎯 Project Overview
-Box AI is a professional iOS coaching application that provides real-time boxing technique analysis using on-device AI. The app uses the device's camera to analyze boxing form and provides instant feedback to help users improve their technique.
+## What’s in this repo
+- **SwiftUI app skeleton** (organized by feature folders)
+  - `UI/` – shell/navigation
+  - `Capture/` – camera permission + camera preview
+  - `Pose/` – pose/vision stubs (placeholder)
+  - `Coach/` – coaching logic stubs (placeholder)
+- **Localization**: English, Spanish, French
+- **Camera usage description** in `Info.plist`
+- **XcodeGen** project spec (`ios/project.yml`) so the project can be generated consistently
 
-## ✨ Key Features
-- **Real-time Camera Analysis**: Live video feed with pose detection
-- **On-device AI Feedback**: Apple Intelligence-powered coaching
-- **Professional Techniques**: Based on authentic boxing methodologies
-- **Multi-language Support**: English, Spanish, French
-- **Premium UI/UX**: "Liquid Glass" design aesthetic
+## Requirements
+- macOS with Xcode 15+
+- XcodeGen (recommended)
 
-## 👥 Development Team
-- **Project Lead**: @Codex_vps_bot
-- **iOS Developer**: @Mi_codex_bot (Apple Intelligence, Foundation Models)
-- **UI/UX Designer**: @Vps_kimi_bot (Liquid Glass design, SwiftUI)
-- **Support/Ideas**: @ballenita_deep_bot
-
-## 🛠️ Technical Stack
-- **Platform**: iOS 18+
-- **Language**: Swift 5.9+
-- **UI Framework**: SwiftUI
-- **AI/ML**: Apple Intelligence, Core ML, Vision Framework
-- **Architecture**: MVVM
-- **Camera**: AVFoundation
-- **Localization**: String catalogs (en, es, fr)
-
-## 📁 Project Structure
-```
-BoxAI/
-├── BoxAI.xcodeproj/          # Xcode project
-├── BoxAI/                    # Main source code
-│   ├── App/                  # App entry point
-│   ├── Features/             # Core features
-│   │   ├── Camera/           # Real-time camera module
-│   │   ├── Coaching/         # Boxing coaching logic
-│   │   ├── AI/               # On-device AI processing
-│   │   └── Settings/         # User preferences
-│   ├── UI/                   # UI components
-│   ├── Models/               # Data models
-│   ├── Services/             # Service layer
-│   ├── Resources/            # Assets & localization
-│   └── Utilities/            # Helper utilities
-├── BoxAITests/               # Unit tests
-├── BoxAIUITests/             # UI tests
-└── Documentation/            # Project documentation
-```
-
-## 🚀 Getting Started
-
-### Prerequisites
-- macOS 15.0+
-- Xcode 16.2+
-- iOS 18+ device or simulator
-- Apple Developer account (for on-device testing)
-
-### Installation
+Install XcodeGen:
 ```bash
-# Clone the repository
-git clone https://github.com/mitre88/box-ia-tutor.git
-cd box-ia-tutor
-
-# Open in Xcode
-open BoxAI.xcodeproj
+brew install xcodegen
 ```
 
-### Build & Run
-1. Open `BoxAI.xcodeproj` in Xcode
-2. Select your target device/simulator
-3. Press `Cmd + R` to build and run
+## Generate the Xcode project
+From the repo root:
+```bash
+cd ios
+xcodegen generate
+open BoxIATutor.xcodeproj
+```
 
-## 📋 Development Status
-- **Current Phase**: Initial setup and architecture
-- **Last Update**: 24 February 2026
-- **Next Milestone**: Basic project structure and UI wireframes
+## Notes
+- This repo is currently a **skeleton**. Pose estimation / coaching logic are intentionally stubs to be filled in.
+- Camera preview uses `AVCaptureSession` and requests permission at runtime.
 
-## 🔧 Development Workflow
-1. **Design Phase** (@Vps_kimi_bot): Wireframes → UI components
-2. **Development Phase** (@Mi_codex_bot): Architecture → Features → AI integration
-3. **Integration Phase** (@Codex_vps_bot): CI/CD → Testing → Deployment
-4. **Review Phase**: Team review → User testing → Refinement
+## Next steps (suggested)
+- Add a real pose pipeline (Vision / MediaPipe / MoveNet / etc.)
+- Add a coaching state machine and sample exercise flows
+- Add unit tests and CI (GitHub Actions for Xcode)
 
-## 📞 Contact & Coordination
-- **Project Lead**: @Codex_vps_bot
-- **Repository**: https://github.com/mitre88/box-ia-tutor
-- **Team Communication**: This group chat
-
-## 📄 License
-Proprietary - All rights reserved
-
----
-
-**Started**: 24 February 2026  
-**Goal**: "Avancen hasta terminar" - Complete professional boxing coaching app
+## Coordination
+- Repository: https://github.com/mitre88/box-ia-tutor
+- Team comms: this group chat
